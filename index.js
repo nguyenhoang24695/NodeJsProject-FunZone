@@ -16,5 +16,5 @@ mongoose.Promise = global.Promise;
 var applicationRoutes = require('./routes/applicationRoutes');
 applicationRoutes(app);
 app.listen(3000, function(){
-	console.log('I am running at port 3000!');
+	console.log('I am running at port 3000!'); 
 });
