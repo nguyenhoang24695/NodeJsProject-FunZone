@@ -4,6 +4,7 @@ var mongoose = require('mongoose');
 var mongooseTransactions = require('mongoose-transactions');
 var cors = require('cors');
 var app = express();
+app.set('port', (process.env.PORT || 5000));
 
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -15,6 +16,6 @@ mongoose.Promise = global.Promise;
 
 var applicationRoutes = require('./routes/applicationRoutes');
 applicationRoutes(app);
-app.listen(3000, function(){
+app.listen(app.get('port'), function(){
 	console.log('I am running at port 3000!'); 
 });
