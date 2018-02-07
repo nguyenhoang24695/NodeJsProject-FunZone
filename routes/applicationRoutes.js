@@ -28,10 +28,11 @@ module.exports = function (app) {
 	// order API
 	app.route('/_api/v1/order')
 		.get(orderController.getAllList)
-		.put(orderController.update);
-	app.route('/_api/v1/order/:status')
-		.get(orderController.getList)
+		.put(orderController.update)
 		.delete(orderController.delete);
+	app.route('/_api/v1/order/:status')
+		.get(orderController.getList);
+		
 	app.route('/_api/v1/order/d/:id')
 		.get(orderController.getDetail)
 
