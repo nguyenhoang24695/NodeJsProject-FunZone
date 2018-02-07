@@ -85,7 +85,7 @@ module.exports = function (app) {
 			if (err)
 				return res.status(500).send(err);
 
-			res.send('http://localhost:3000/images/' + sampleFile.name);
+			res.send('http://funzone-project.herokuapp.com/images/' + sampleFile.name);
 		});
 	});
 }
