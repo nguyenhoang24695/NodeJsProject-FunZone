@@ -21,5 +21,5 @@ app.use(express.static('./public'));
 var applicationRoutes = require('./routes/applicationRoutes');
 applicationRoutes(app);
 app.listen(app.get('port'), function(){
-	console.log('I am running at port 3000!');
+	console.log('I am running at port'+ app.get('port') + '!');
 });
